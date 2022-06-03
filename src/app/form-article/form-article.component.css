@@ -1,0 +1,9 @@
+#create-article{
+    padding: 20px;
+    margin: 20px 0;
+}
+#create-article button[type="submit"] {
+    margin: auto;
+    display: block;
+    width: 150px;
+}

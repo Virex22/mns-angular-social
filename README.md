@@ -1,5 +1,34 @@
 # MiniBlog
 
+## Objectif TP :
+### Barème point :
+- rendu	1/1
+- page connexion 1/1	
+- page inscription 1/1	
+- api connexion	1/1
+- api inscription 1/1
+- navbar co/deco 2/2
+- presentation propre (css) 2/2	
+- stockage token 1/1
+- liste articles 1/1	
+- liste commentaire	1/1
+- ajout article	1/1
+- ajout commentaire 1/1	
+- bouton modif/supp si article de l'utilisateur	 1/1
+- supp article	1/1
+- supp commentaire	1/1
+- modif article	1/1
+- modif commentaire	1/1
+- liste user	1/1
+- profile user	1/1
+- modif user (si son profil) 1/1
+- supp user (si son profil)	1/1
+- tests sur un composant au choix 1/1 (src\app\footer\footer.component.spec.ts)
+- tests sur un service au choix 1/1 (src\app\service\Token\token.service.spec.ts)
+
+soit 25/25 => 20/20
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
 
 ## Development server

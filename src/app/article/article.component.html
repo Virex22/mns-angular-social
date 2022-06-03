@@ -1,0 +1,23 @@
+<div class="block p-6 rounded-lg border shadow-md bg-gray-800 border-gray-700 hover:bg-gray-700">
+    <div class="article-header">
+        <p class="mb-2 text-2xl font-bold tracking-tight text-white">{{article?.titre}}</p>
+        <div>
+            <p class="mb-2 text-xl font-bold tracking-tight text-gray-400">{{owner?.pseudo}} le {{article?.creation | date}}</p>
+            <div *ngIf="IAmOwner()" class="buttonGroup inline-flex rounded-md shadow-sm" role="group">
+                <button type="button" (click)="goToEditArticle()" class="py-2 px-4 text-sm font-medium  bg-transparent rounded-l-lg border hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 border-white text-white hover:text-white hover:bg-gray-900 focus:bg-gray-700">
+                  Modifier
+                </button>
+                <button type="button" (click)="delete()" class="py-2 px-4 text-sm font-medium  bg-transparent rounded-r-md border hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 border-white text-white hover:text-white hover:bg-gray-900 focus:bg-gray-700">
+                  Supprimer
+                </button>
+            </div>
+        </div>
+    </div>
+    <p class="font-normal text-gray-400">{{article?.contenu}}</p>
+    <div class="comment-wrapper" *ngFor="let comment of comments">
+        <app-commentaire [comment]="comment"></app-commentaire>
+    </div>
+    <div class="comment-form">
+        <app-form-commentaire [idArticle]="article?.id_article"></app-form-commentaire>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+.comment-header{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttonGroup{
+    display: flex;
+    justify-content: flex-end;
+}

@@ -1,0 +1,20 @@
+#profil{
+    margin: 50px auto;
+    padding: 50px 50px 20px 50px;
+    position: relative;
+}
+#dropdownButton{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+#table-comment,
+#table-article{
+    width: 70vw;
+    margin: 20px auto;
+}
+#buttonGroup{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}

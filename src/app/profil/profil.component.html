@@ -1,0 +1,63 @@
+
+<div id="profil" class="max-w-sm rounded-lg border shadow-md bg-gray-800 border-gray-700">
+    <div class="flex justify-end px-4 pt-4">
+        <div *ngIf="myProfile()" id="buttonGroup" class="buttonGroup inline-flex rounded-md shadow-sm" role="group">
+            <button (click)="edit()" type="button" class="py-2 px-4 text-sm font-medium  bg-transparent rounded-l-lg border hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 border-white text-white hover:text-white hover:bg-gray-900 focus:bg-gray-700">
+            Modifier
+            </button>
+            <button (click)="delete()" type="button" class="py-2 px-4 text-sm font-medium  bg-transparent rounded-r-md border hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 border-white text-white hover:text-white hover:bg-gray-900 focus:bg-gray-700">
+            Supprimer
+            </button>
+        </div>
+    </div>
+    <div class="flex flex-col items-center pb-10">
+        <img class="mb-3 w-24 h-24 rounded-full shadow-lg" src="/assets/profil.png" alt="">
+        <h5 class="mb-1 text-xl font-medium text-white">{{user?.pseudo}}</h5>
+        <span class="text-sm  text-gray-400">{{user?.email}}</span>
+    </div>
+</div>
+<h1 class="text-xl text-white">Article publier par l'utilisateur</h1>
+<div  class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table id="table-article" class="text-sm text-left text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-700 text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                Nom
+                </th>
+                <th scope="col" class="px-6 py-3">
+                Contenu
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let article of articles"  class="border-b bg-gray-800 border-gray-700 hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap">
+                    {{article.titre}}
+                </th>
+                <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap">
+                    {{article.contenu | slice:0:50}}
+                </th>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<h1 class="text-xl text-white">Commentaire publier par l'utilisateur</h1>
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table id="table-comment" class="text-sm text-left text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-700 text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                Contenu
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let comment of comments"  class="border-b bg-gray-800 border-gray-700 hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-white whitespace-nowrap">
+                {{comment.contenu | slice:0:50}}
+                </th>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    

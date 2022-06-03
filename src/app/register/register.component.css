@@ -1,0 +1,19 @@
+.white-text{
+    color: white;
+}
+#incontainer{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    background-color: #1f2937;
+    display: flex;
+    margin: 20px auto;
+    border: rgba(58, 88, 129,0.5) 1px solid;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 20px;
+    width: 400px;
+}

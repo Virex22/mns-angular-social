@@ -1,0 +1,36 @@
+<div id="incontainer">
+<form  [formGroup]="userForm" (ngSubmit)="validForm()" class="border-gray-700">
+    <div class="mb-6">
+        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300 white-text">Votre email</label>
+        <input formControlName="email" type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="your@email.adress" required="">
+    </div>
+    <div *ngIf="showError.email" class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
+        Votre <span class="font-medium">Email</span> n'est pas valide.
+    </div>
+    <div class="mb-6">
+        <label for="pseudo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300 white-text">Votre pseudo</label>
+        <input formControlName="pseudo" type="text" id="pseudo" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="pseudo" required="">
+    </div>
+    <div *ngIf="showError.pseudo" class="p-4 mb-4 text-sm rounded-lg bg-red-200 text-red-800" role="alert">
+        Votre <span class="font-medium">Pseudo</span> doit contenir au moin 3 caractères.
+    </div>
+    <div class="mb-6">
+        <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300 white-text">Votre mot de passe</label>
+        <input formControlName="password" type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+    </div>
+    <div *ngIf="showError.password" class="p-4 mb-4 text-sm rounded-lg bg-red-200 text-red-800" role="alert">
+        Votre <span class="font-medium">Mot de passe</span> doit contenir une majuscule, une minuscule, 8 caractère, un nombre.
+    </div>
+    <div class="mb-6">
+        <label for="passwordConfirm" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300 white-text">Confirmer mot de passe</label>
+        <input formControlName="passwordConfirm" type="password" id="passwordConfirm" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+    </div>
+    <div *ngIf="showError.passwordConfirm" class="p-4 mb-4 text-sm rounded-lg bg-red-200 text-red-800" role="alert">
+        Les <span class="font-medium">Mots de passe</span> ne se corréspondent pas.
+    </div>
+    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+</form>
+</div>
+
+
+    
